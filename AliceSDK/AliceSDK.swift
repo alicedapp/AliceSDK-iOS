@@ -41,7 +41,6 @@ class AliceSDK {
     var delegate: AliceDelegate?
     
     static func sendRequest(request: AliceSDKMethod) {
-        
     }
     
     static func getAddress() {
@@ -96,7 +95,7 @@ class AliceSDK {
         var dict = [String: String]()
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
         if let queryItems = components.queryItems {
-            queryItems.map { item in
+            let _ = queryItems.map { item in
                 dict[item.name] = item.value!
             }
         }
@@ -118,10 +117,10 @@ class AliceSDK {
             }
             response.address = address
         case .sendTransaction:
-            guard let address = dict["address"] else {
+            guard let txHash = dict["txHash"] else {
                 return false
             }
-            response.address = address
+            response.trasactionHash = txHash
         }
         
         AliceSDK.shared.delegate!.didReceiveAliceResponse(response: response)

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "AliceSDK"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "AliceSDK Support Ethereum Payment With Alice Wallet."
   spec.description  = "AliceSDK Support Ethereum Payment With Alice Wallet"
   spec.homepage     = "https://github.com/alicedapp/AliceSDK-iOS"
