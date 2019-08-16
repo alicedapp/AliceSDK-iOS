@@ -50,7 +50,8 @@ class ViewController: UIViewController, AliceDelegate {
     }
     
     @IBAction func sendTransaction() {
-        
+        AliceSDK.sendTransaction(to: "0xA60f8a3E6586aA590a4AD9EE0F264A1473Bab7cB",
+                                 value: "0x2386f26fc10000")
     }
     
 }
