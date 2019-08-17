@@ -13,7 +13,7 @@ Currently, AliceSDK support following method.
 
 # Install
 
-- Use cocopods
+- Use cocoapods
 
   ```
   pod 'AliceSDK'
@@ -75,13 +75,13 @@ Following is the using case of Alice SDK:
 
 ### GetAddress
 
-#####Input:
+##### Input:
 
 ```swift
 AliceSDK.getAddress()
 ```
 
-#####Output:
+##### Output:
 
 ```swift
 func didReceiveAliceResponse(response: AliceResponse) {
