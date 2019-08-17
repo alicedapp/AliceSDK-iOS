@@ -127,7 +127,7 @@ func didReceiveAliceResponse(response: AliceResponse) {
 
 ##### Output:
 
-```
+```swift
 func didReceiveAliceResponse(response: AliceResponse) {
 		let signedData = response.signedData
 	  // do something
@@ -150,7 +150,7 @@ AliceSDK.sendTransaction(to: "0xA60f8a3E6586aA590a4AD9EE0F264A1473Bab7cB",
 
 ##### Output:
 
-```
+```swift
 func didReceiveAliceResponse(response: AliceResponse) {
 		let trasactionHash = response.trasactionHash
 	  // do something
