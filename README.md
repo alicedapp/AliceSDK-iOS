@@ -2,16 +2,16 @@
 
 # Introduction
 
-Alice SDK iOS support other app use alice SDK to comfirm payment and sign message through alice.
+Alice SDK on iOS supports other apps that want to access crypto payments and don't want to build an entire wallet to do so but rather use an SDK. The Alice SDK allows your app to comfirm payments and sign messages via the Alice app.
 
-Currently, AliceSDK support following method.
+Currently, the AliceSDK supports the following methods.
 
 - getAddress
 - signMessage
 - sendTransaction
 - signTransaction
 
-# Install
+# Installation
 
 - Use cocoapods
 
@@ -21,13 +21,13 @@ Currently, AliceSDK support following method.
 
 - Manual import
 
-  Download this reposrepository and drag AliceSDK folder to your Project
+  Download this repository and drag the AliceSDK folder into your project.
 
 
 
 # How to use
 
-1. Add `AliceSDK.handle(url: url)` under `func application(_ app: UIApplication, open url: URL,option)` in ***AppDelegate.swift***
+1. Add `AliceSDK.handle(url: url)` under `func application(_ app: UIApplication, open url: URL,option)` in your ***AppDelegate.swift***
 
    ```swift
        func application(_ app: UIApplication, 
@@ -37,8 +37,6 @@ Currently, AliceSDK support following method.
            return true
        }
    ```
-
-   
 
 2. Create a class inherit `AliceDelegate`
 
@@ -59,7 +57,7 @@ Currently, AliceSDK support following method.
    }
    ```
 
-3. Create a instance for this class, and using the deledelegate 
+3. Create an instance for this class, and use the delegate method
 
    ```swift
    init() {
@@ -71,7 +69,7 @@ Currently, AliceSDK support following method.
 
 # API
 
-Following is the using case of Alice SDK:
+The following is the API for the Alice SDK:
 
 ### GetAddress
 
@@ -94,7 +92,7 @@ func didReceiveAliceResponse(response: AliceResponse) {
 
 ##### Input:
 
-- **Messsage** is a normal string, no data string.
+- **Messsage** is a normal string, not a data string.
 
 ```swift
 AliceSDK.signMessage(message: "String") // Normal String, no data string
@@ -109,15 +107,13 @@ func didReceiveAliceResponse(response: AliceResponse) {
 }
 ```
 
-
-
 ### SignTransaction
 
 ##### Input:
 
-- **To**: Etherenum address string
+- **To**: Ethereum address string
 - **Value**: [BigInt](https://github.com/attaswift/BigInt)
-- **Data**: Data sting in hex
+- **Data**: Data string in hex
 
 ```swift
  AliceSDK.signTransaction(to: "0xA60f8a3E6586aA590a4AD9EE0F264A1473Bab7cB",
@@ -140,7 +136,7 @@ func didReceiveAliceResponse(response: AliceResponse) {
 
 ##### Input:
 
-- **To**: Etherenum address string
+- **To**: Ethereum address string
 - **Value**: [BigInt](https://github.com/attaswift/BigInt)
 
 ```swift
